@@ -108,9 +108,9 @@ Partial Class Form1
         Me.MainPanel.Controls.Add(Me.ClockTime_Label)
         Me.MainPanel.Controls.Add(Me.RunningTime_TextBox)
         Me.MainPanel.Controls.Add(Me.RunningTime_Label)
-        Me.MainPanel.Location = New System.Drawing.Point(149, 0)
+        Me.MainPanel.Location = New System.Drawing.Point(316, 0)
         Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(626, 464)
+        Me.MainPanel.Size = New System.Drawing.Size(749, 464)
         Me.MainPanel.TabIndex = 0
         '
         'PWMOut_TextBox
@@ -485,7 +485,7 @@ Partial Class Form1
         Me.RightPanel.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.RightPanel.Location = New System.Drawing.Point(-3, 0)
         Me.RightPanel.Name = "RightPanel"
-        Me.RightPanel.Size = New System.Drawing.Size(161, 464)
+        Me.RightPanel.Size = New System.Drawing.Size(322, 464)
         Me.RightPanel.TabIndex = 1
         '
         'Exit_button
@@ -504,7 +504,7 @@ Partial Class Form1
         Me.Title2_Label.AutoSize = True
         Me.Title2_Label.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Title2_Label.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Title2_Label.Location = New System.Drawing.Point(32, 42)
+        Me.Title2_Label.Location = New System.Drawing.Point(26, 52)
         Me.Title2_Label.Name = "Title2_Label"
         Me.Title2_Label.Size = New System.Drawing.Size(114, 31)
         Me.Title2_Label.TabIndex = 1
@@ -515,7 +515,7 @@ Partial Class Form1
         Me.Title1_label.AutoSize = True
         Me.Title1_label.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold)
         Me.Title1_label.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Title1_label.Location = New System.Drawing.Point(39, 16)
+        Me.Title1_label.Location = New System.Drawing.Point(33, 26)
         Me.Title1_label.Name = "Title1_label"
         Me.Title1_label.Size = New System.Drawing.Size(88, 31)
         Me.Title1_label.TabIndex = 0
@@ -525,13 +525,14 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(771, 462)
+        Me.ClientSize = New System.Drawing.Size(1063, 561)
         Me.Controls.Add(Me.RightPanel)
         Me.Controls.Add(Me.MainPanel)
         Me.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Form1"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MainPanel.ResumeLayout(False)
         Me.MainPanel.PerformLayout()
         Me.RightPanel.ResumeLayout(False)
@@ -544,20 +545,7 @@ Partial Class Form1
     Friend WithEvents MainPanel As Panel
     Friend WithEvents RightPanel As Panel
     Friend WithEvents Title1_label As Label
-
-    Private Sub MainPanel_Paint(sender As Object, e As PaintEventArgs) Handles MainPanel.Paint
-
-    End Sub
-
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Title1_label.Click
-
-    End Sub
     Friend WithEvents Title2_Label As Label
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
     Friend WithEvents Status_Label As Label
     Friend WithEvents ClockTime_Label As Label
     Friend WithEvents RunningTime_TextBox As TextBox
@@ -565,8 +553,6 @@ Partial Class Form1
     Friend WithEvents Current_Label As Label
     Friend WithEvents Voltage_TextBox As TextBox
     Friend WithEvents Voltage_Label As Label
-
-
     Friend WithEvents Cycle_TextBox As TextBox
     Friend WithEvents Cycle_Label As Label
     Friend WithEvents CellTemp_TextBox As TextBox
