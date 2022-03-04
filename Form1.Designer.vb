@@ -254,11 +254,11 @@ Partial Class Form1
         'AmbTemp_Label
         '
         Me.AmbTemp_Label.AutoSize = True
-        Me.AmbTemp_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
+        Me.AmbTemp_Label.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AmbTemp_Label.ForeColor = System.Drawing.Color.Teal
         Me.AmbTemp_Label.Location = New System.Drawing.Point(27, 284)
         Me.AmbTemp_Label.Name = "AmbTemp_Label"
-        Me.AmbTemp_Label.Size = New System.Drawing.Size(170, 21)
+        Me.AmbTemp_Label.Size = New System.Drawing.Size(141, 17)
         Me.AmbTemp_Label.TabIndex = 24
         Me.AmbTemp_Label.Tag = ""
         Me.AmbTemp_Label.Text = "Ambient Temperature"
@@ -591,5 +591,4 @@ Partial Class Form1
     Friend WithEvents AmbTemp_Label As Label
     Friend WithEvents Exit_button As Label
     Friend WithEvents SerialPort1 As IO.Ports.SerialPort
-
 End Class
