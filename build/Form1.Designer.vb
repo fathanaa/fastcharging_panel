@@ -1084,7 +1084,6 @@ Partial Class Form1
         Me.RunningTime_TextBox.ReadOnly = True
         Me.RunningTime_TextBox.Size = New System.Drawing.Size(204, 28)
         Me.RunningTime_TextBox.TabIndex = 1
-        Me.RunningTime_TextBox.Text = "00 : 00 : 00"
         Me.RunningTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Timer

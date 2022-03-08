@@ -6,6 +6,7 @@ Public Class Form1
 
     Dim dataMasuk As String
     Dim pemisahData As String()
+    Dim stopWatch As New Diagnostics.Stopwatch
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -24,7 +25,14 @@ Public Class Form1
     End Sub
 
     Private Sub Timer_Tick(sender As Object, e As EventArgs) Handles Timer.Tick
-        Timer.Interval = 1000
+
+        stopWatch.Start()
+        Dim elapsed As TimeSpan = stopWatch.Elapsed
+        RunningTime_TextBox.Text = String.Format("{0:00}:{1:00}:{2:00}",
+                                                 elapsed.Hours, elapsed.Minutes, elapsed.Seconds)
+
+        ClockTime_TextBox.Text = Date.Now.ToString("hh:mm:ss")
+
         Try
             pemisahData = dataMasuk.Split(";")
             Voltage_TextBox.Text = pemisahData(0)
@@ -66,23 +74,5 @@ Public Class Form1
     Dim inputNum As Integer
     Dim timePerParse As Stopwatch
 
-    Private Sub RunningTime_TextBox_TextChanged(sender As Object, e As EventArgs) Handles RunningTime_TextBox.TextChanged
-        timePerParse = Stopwatch.StartNew()
-
-        Try
-            inputNum = Int32.Parse("0")
-        Catch ex As FormatException
-            inputNum = 0
-        End Try
-
-        RunningTime_TextBox.Text = ticksThisTime
-        System.Console.WriteLine(ticksThisTime)
-
-        ' Stop the timer, and save the
-        ' elapsed ticks for the operation.
-        timePerParse.Stop()
-        ticksThisTime = timePerParse.ElapsedTicks
-
-    End Sub
 End Class
 
