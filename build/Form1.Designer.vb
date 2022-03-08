@@ -55,6 +55,7 @@ Partial Class Form1
         Me.CellTemp_TextBox = New System.Windows.Forms.TextBox()
         Me.CellTemp_Label = New System.Windows.Forms.Label()
         Me.Energy_Panel = New System.Windows.Forms.Panel()
+        Me.Energy_TextBox = New System.Windows.Forms.TextBox()
         Me.Energy_Label = New System.Windows.Forms.Label()
         Me.Voltage_Panel = New System.Windows.Forms.Panel()
         Me.Voltage_TextBox = New System.Windows.Forms.TextBox()
@@ -72,9 +73,9 @@ Partial Class Form1
         Me.ClockTime_TextBox = New System.Windows.Forms.TextBox()
         Me.ClockTime_Label = New System.Windows.Forms.Label()
         Me.RunningTime_Panel = New System.Windows.Forms.Panel()
-        Me.RunningTime_TextBox = New System.Windows.Forms.TextBox()
-        Me.Energy_TextBox = New System.Windows.Forms.TextBox()
         Me.RunningText_Label = New System.Windows.Forms.Label()
+        Me.RunningTime_TextBox = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.RightPanel.SuspendLayout()
         CType(Me.LogoMTI_PictureBox, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MainPanel.SuspendLayout()
@@ -136,7 +137,7 @@ Partial Class Form1
         '
         'MainPanel
         '
-        Me.MainPanel.BackColor = System.Drawing.Color.WhiteSmoke
+        Me.MainPanel.BackColor = System.Drawing.Color.SeaShell
         Me.MainPanel.Controls.Add(Me.TableLayoutPanel)
         Me.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MainPanel.Location = New System.Drawing.Point(0, 0)
@@ -593,6 +594,24 @@ Partial Class Form1
         Me.Energy_Panel.Size = New System.Drawing.Size(220, 83)
         Me.Energy_Panel.TabIndex = 1
         '
+        'Energy_TextBox
+        '
+        Me.Energy_TextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Energy_TextBox.BackColor = System.Drawing.Color.Bisque
+        Me.Energy_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.Energy_TextBox.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.Energy_TextBox.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Energy_TextBox.ForeColor = System.Drawing.Color.Black
+        Me.Energy_TextBox.Location = New System.Drawing.Point(8, 40)
+        Me.Energy_TextBox.Name = "Energy_TextBox"
+        Me.Energy_TextBox.ReadOnly = True
+        Me.Energy_TextBox.Size = New System.Drawing.Size(204, 28)
+        Me.Energy_TextBox.TabIndex = 5
+        Me.Energy_TextBox.Text = "00 : 00 : 00"
+        Me.Energy_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
         'Energy_Label
         '
         Me.Energy_Label.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -617,6 +636,7 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Voltage_Panel.BackColor = System.Drawing.Color.Bisque
+        Me.Voltage_Panel.Controls.Add(Me.Label1)
         Me.Voltage_Panel.Controls.Add(Me.Voltage_TextBox)
         Me.Voltage_Panel.Controls.Add(Me.Voltage_Label)
         Me.Voltage_Panel.Location = New System.Drawing.Point(8, 107)
@@ -876,42 +896,6 @@ Partial Class Form1
         Me.RunningTime_Panel.Size = New System.Drawing.Size(220, 83)
         Me.RunningTime_Panel.TabIndex = 0
         '
-        'RunningTime_TextBox
-        '
-        Me.RunningTime_TextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RunningTime_TextBox.BackColor = System.Drawing.Color.SandyBrown
-        Me.RunningTime_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RunningTime_TextBox.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.RunningTime_TextBox.Font = New System.Drawing.Font("Oswald", 20.0!)
-        Me.RunningTime_TextBox.ForeColor = System.Drawing.Color.Black
-        Me.RunningTime_TextBox.Location = New System.Drawing.Point(8, 39)
-        Me.RunningTime_TextBox.Name = "RunningTime_TextBox"
-        Me.RunningTime_TextBox.ReadOnly = True
-        Me.RunningTime_TextBox.Size = New System.Drawing.Size(204, 40)
-        Me.RunningTime_TextBox.TabIndex = 1
-        Me.RunningTime_TextBox.Text = "00 : 00 : 00"
-        Me.RunningTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Energy_TextBox
-        '
-        Me.Energy_TextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-            Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Energy_TextBox.BackColor = System.Drawing.Color.Bisque
-        Me.Energy_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Energy_TextBox.Cursor = System.Windows.Forms.Cursors.Arrow
-        Me.Energy_TextBox.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Energy_TextBox.ForeColor = System.Drawing.Color.Black
-        Me.Energy_TextBox.Location = New System.Drawing.Point(8, 40)
-        Me.Energy_TextBox.Name = "Energy_TextBox"
-        Me.Energy_TextBox.ReadOnly = True
-        Me.Energy_TextBox.Size = New System.Drawing.Size(204, 28)
-        Me.Energy_TextBox.TabIndex = 5
-        Me.Energy_TextBox.Text = "00 : 00 : 00"
-        Me.Energy_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
         'RunningText_Label
         '
         Me.RunningText_Label.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -930,6 +914,34 @@ Partial Class Form1
         Me.RunningText_Label.TabIndex = 0
         Me.RunningText_Label.Text = "Running Time"
         Me.RunningText_Label.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'RunningTime_TextBox
+        '
+        Me.RunningTime_TextBox.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RunningTime_TextBox.BackColor = System.Drawing.Color.SandyBrown
+        Me.RunningTime_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
+        Me.RunningTime_TextBox.Cursor = System.Windows.Forms.Cursors.Arrow
+        Me.RunningTime_TextBox.Font = New System.Drawing.Font("Oswald", 20.0!)
+        Me.RunningTime_TextBox.ForeColor = System.Drawing.Color.Black
+        Me.RunningTime_TextBox.Location = New System.Drawing.Point(8, 32)
+        Me.RunningTime_TextBox.Name = "RunningTime_TextBox"
+        Me.RunningTime_TextBox.ReadOnly = True
+        Me.RunningTime_TextBox.Size = New System.Drawing.Size(204, 40)
+        Me.RunningTime_TextBox.TabIndex = 1
+        Me.RunningTime_TextBox.Text = "00 : 00 : 00"
+        Me.RunningTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(192, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(20, 20)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "V"
         '
         'Form1
         '
@@ -1031,4 +1043,5 @@ Partial Class Form1
     Friend WithEvents ClockTime_Label As Label
     Friend WithEvents Energy_TextBox As TextBox
     Friend WithEvents RunningText_Label As Label
+    Friend WithEvents Label1 As Label
 End Class
