@@ -74,5 +74,22 @@ Public Class Form1
     Dim inputNum As Integer
     Dim timePerParse As Stopwatch
 
+    Private Sub Exit_Button_Click(sender As Object, e As EventArgs) Handles Exit_Button.Click
+        Dim result As Integer = MessageBox.Show(
+            "Dow you wish to close this program ?",
+            "Exit", MessageBoxButtons.YesNo)
+
+        If result = DialogResult.No Then
+            Activate()
+        ElseIf result = DialogResult.Yes Then
+            If SerialPortArduino.IsOpen Then
+                SerialPortArduino.Close()
+                Timer.Enabled = False
+                Timer.Stop()
+                stopWatch.Stop()
+            End If
+            Application.Exit()
+        End If
+    End Sub
 End Class
 
