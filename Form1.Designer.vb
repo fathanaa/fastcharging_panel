@@ -23,558 +23,348 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.RunningTime_Label = New System.Windows.Forms.Label()
-        Me.MainPanel = New System.Windows.Forms.Panel()
-        Me.PWMOut_TextBox = New System.Windows.Forms.TextBox()
-        Me.PWMOut_Label = New System.Windows.Forms.Label()
-        Me.DPowerTarget_TextBox = New System.Windows.Forms.TextBox()
-        Me.DPowerTarget_Label = New System.Windows.Forms.Label()
-        Me.DCurrentTarget_TextBox = New System.Windows.Forms.TextBox()
-        Me.DCurrentTarget_Label = New System.Windows.Forms.Label()
-        Me.CellFanCool_TextBox = New System.Windows.Forms.TextBox()
-        Me.CellFanCool_Label = New System.Windows.Forms.Label()
-        Me.AmbHumid_TextBox = New System.Windows.Forms.TextBox()
-        Me.AmbHumid_Label = New System.Windows.Forms.Label()
-        Me.AmbTemp_TextBox = New System.Windows.Forms.TextBox()
-        Me.AmbTemp_Label = New System.Windows.Forms.Label()
-        Me.Cycle_TextBox = New System.Windows.Forms.TextBox()
-        Me.Cycle_Label = New System.Windows.Forms.Label()
-        Me.CellTemp_TextBox = New System.Windows.Forms.TextBox()
-        Me.CellTemp_Label = New System.Windows.Forms.Label()
-        Me.Energy_TextBox = New System.Windows.Forms.TextBox()
-        Me.Energy_Label = New System.Windows.Forms.Label()
-        Me.Status_TextBox = New System.Windows.Forms.TextBox()
-        Me.ClockTime_TextBox = New System.Windows.Forms.TextBox()
-        Me.Power_TextBox = New System.Windows.Forms.TextBox()
-        Me.Current_TextBox = New System.Windows.Forms.TextBox()
-        Me.Power_Label = New System.Windows.Forms.Label()
-        Me.Current_Label = New System.Windows.Forms.Label()
-        Me.Voltage_TextBox = New System.Windows.Forms.TextBox()
-        Me.Voltage_Label = New System.Windows.Forms.Label()
-        Me.Status_Label = New System.Windows.Forms.Label()
-        Me.ClockTime_Label = New System.Windows.Forms.Label()
-        Me.RunningTime_TextBox = New System.Windows.Forms.TextBox()
-        Me.RightPanel = New System.Windows.Forms.Panel()
-        Me.Exit_button = New System.Windows.Forms.Label()
-        Me.Title2_Label = New System.Windows.Forms.Label()
-        Me.Title1_label = New System.Windows.Forms.Label()
+        Dim ChartArea4 As System.Windows.Forms.DataVisualization.Charting.ChartArea = New System.Windows.Forms.DataVisualization.Charting.ChartArea()
+        Dim Legend4 As System.Windows.Forms.DataVisualization.Charting.Legend = New System.Windows.Forms.DataVisualization.Charting.Legend()
+        Dim Series4 As System.Windows.Forms.DataVisualization.Charting.Series = New System.Windows.Forms.DataVisualization.Charting.Series()
         Me.SerialPort1 = New System.IO.Ports.SerialPort(Me.components)
-        Me.MainPanel.SuspendLayout()
-        Me.RightPanel.SuspendLayout()
+        Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.Panel7 = New System.Windows.Forms.Panel()
+        Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.Panel10 = New System.Windows.Forms.Panel()
+        Me.Panel11 = New System.Windows.Forms.Panel()
+        Me.Panel12 = New System.Windows.Forms.Panel()
+        Me.Panel13 = New System.Windows.Forms.Panel()
+        Me.Panel14 = New System.Windows.Forms.Panel()
+        Me.Panel15 = New System.Windows.Forms.Panel()
+        Me.Panel16 = New System.Windows.Forms.Panel()
+        Me.Panel17 = New System.Windows.Forms.Panel()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Chart1 = New System.Windows.Forms.DataVisualization.Charting.Chart()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TableLayoutPanel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel1.SuspendLayout()
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'RunningTime_Label
-        '
-        Me.RunningTime_Label.AutoSize = True
-        Me.RunningTime_Label.Font = New System.Drawing.Font("Yu Gothic UI", 15.75!, System.Drawing.FontStyle.Bold)
-        Me.RunningTime_Label.ForeColor = System.Drawing.Color.Teal
-        Me.RunningTime_Label.Location = New System.Drawing.Point(26, 17)
-        Me.RunningTime_Label.Name = "RunningTime_Label"
-        Me.RunningTime_Label.Size = New System.Drawing.Size(145, 30)
-        Me.RunningTime_Label.TabIndex = 0
-        Me.RunningTime_Label.Tag = "v"
-        Me.RunningTime_Label.Text = "Running Time"
-        '
-        'MainPanel
-        '
-        Me.MainPanel.BackColor = System.Drawing.Color.PaleTurquoise
-        Me.MainPanel.Controls.Add(Me.PWMOut_TextBox)
-        Me.MainPanel.Controls.Add(Me.PWMOut_Label)
-        Me.MainPanel.Controls.Add(Me.DPowerTarget_TextBox)
-        Me.MainPanel.Controls.Add(Me.DPowerTarget_Label)
-        Me.MainPanel.Controls.Add(Me.DCurrentTarget_TextBox)
-        Me.MainPanel.Controls.Add(Me.DCurrentTarget_Label)
-        Me.MainPanel.Controls.Add(Me.CellFanCool_TextBox)
-        Me.MainPanel.Controls.Add(Me.CellFanCool_Label)
-        Me.MainPanel.Controls.Add(Me.AmbHumid_TextBox)
-        Me.MainPanel.Controls.Add(Me.AmbHumid_Label)
-        Me.MainPanel.Controls.Add(Me.AmbTemp_TextBox)
-        Me.MainPanel.Controls.Add(Me.AmbTemp_Label)
-        Me.MainPanel.Controls.Add(Me.Cycle_TextBox)
-        Me.MainPanel.Controls.Add(Me.Cycle_Label)
-        Me.MainPanel.Controls.Add(Me.CellTemp_TextBox)
-        Me.MainPanel.Controls.Add(Me.CellTemp_Label)
-        Me.MainPanel.Controls.Add(Me.Energy_TextBox)
-        Me.MainPanel.Controls.Add(Me.Energy_Label)
-        Me.MainPanel.Controls.Add(Me.Status_TextBox)
-        Me.MainPanel.Controls.Add(Me.ClockTime_TextBox)
-        Me.MainPanel.Controls.Add(Me.Power_TextBox)
-        Me.MainPanel.Controls.Add(Me.Current_TextBox)
-        Me.MainPanel.Controls.Add(Me.Power_Label)
-        Me.MainPanel.Controls.Add(Me.Current_Label)
-        Me.MainPanel.Controls.Add(Me.Voltage_TextBox)
-        Me.MainPanel.Controls.Add(Me.Voltage_Label)
-        Me.MainPanel.Controls.Add(Me.Status_Label)
-        Me.MainPanel.Controls.Add(Me.ClockTime_Label)
-        Me.MainPanel.Controls.Add(Me.RunningTime_TextBox)
-        Me.MainPanel.Controls.Add(Me.RunningTime_Label)
-        Me.MainPanel.Location = New System.Drawing.Point(316, 0)
-        Me.MainPanel.Name = "MainPanel"
-        Me.MainPanel.Size = New System.Drawing.Size(749, 464)
-        Me.MainPanel.TabIndex = 0
-        '
-        'PWMOut_TextBox
-        '
-        Me.PWMOut_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.PWMOut_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.PWMOut_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.PWMOut_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.PWMOut_TextBox.Location = New System.Drawing.Point(459, 392)
-        Me.PWMOut_TextBox.Name = "PWMOut_TextBox"
-        Me.PWMOut_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.PWMOut_TextBox.TabIndex = 35
-        Me.PWMOut_TextBox.Text = "12.241"
-        Me.PWMOut_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'PWMOut_Label
-        '
-        Me.PWMOut_Label.AutoSize = True
-        Me.PWMOut_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.PWMOut_Label.ForeColor = System.Drawing.Color.Teal
-        Me.PWMOut_Label.Location = New System.Drawing.Point(459, 366)
-        Me.PWMOut_Label.Name = "PWMOut_Label"
-        Me.PWMOut_Label.Size = New System.Drawing.Size(80, 21)
-        Me.PWMOut_Label.TabIndex = 34
-        Me.PWMOut_Label.Tag = ""
-        Me.PWMOut_Label.Text = "PWM Out"
-        '
-        'DPowerTarget_TextBox
-        '
-        Me.DPowerTarget_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.DPowerTarget_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DPowerTarget_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.DPowerTarget_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.DPowerTarget_TextBox.Location = New System.Drawing.Point(249, 392)
-        Me.DPowerTarget_TextBox.Name = "DPowerTarget_TextBox"
-        Me.DPowerTarget_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.DPowerTarget_TextBox.TabIndex = 33
-        Me.DPowerTarget_TextBox.Text = "12.241"
-        Me.DPowerTarget_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'DPowerTarget_Label
-        '
-        Me.DPowerTarget_Label.AutoSize = True
-        Me.DPowerTarget_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.DPowerTarget_Label.ForeColor = System.Drawing.Color.Teal
-        Me.DPowerTarget_Label.Location = New System.Drawing.Point(249, 366)
-        Me.DPowerTarget_Label.Name = "DPowerTarget_Label"
-        Me.DPowerTarget_Label.Size = New System.Drawing.Size(125, 21)
-        Me.DPowerTarget_Label.TabIndex = 32
-        Me.DPowerTarget_Label.Tag = ""
-        Me.DPowerTarget_Label.Text = "D. Power Target"
-        '
-        'DCurrentTarget_TextBox
-        '
-        Me.DCurrentTarget_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.DCurrentTarget_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.DCurrentTarget_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.DCurrentTarget_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.DCurrentTarget_TextBox.Location = New System.Drawing.Point(27, 392)
-        Me.DCurrentTarget_TextBox.Name = "DCurrentTarget_TextBox"
-        Me.DCurrentTarget_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.DCurrentTarget_TextBox.TabIndex = 31
-        Me.DCurrentTarget_TextBox.Text = "12.241"
-        Me.DCurrentTarget_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'DCurrentTarget_Label
-        '
-        Me.DCurrentTarget_Label.AutoSize = True
-        Me.DCurrentTarget_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.DCurrentTarget_Label.ForeColor = System.Drawing.Color.Teal
-        Me.DCurrentTarget_Label.Location = New System.Drawing.Point(27, 366)
-        Me.DCurrentTarget_Label.Name = "DCurrentTarget_Label"
-        Me.DCurrentTarget_Label.Size = New System.Drawing.Size(134, 21)
-        Me.DCurrentTarget_Label.TabIndex = 30
-        Me.DCurrentTarget_Label.Tag = ""
-        Me.DCurrentTarget_Label.Text = "D. Current Target"
-        '
-        'CellFanCool_TextBox
-        '
-        Me.CellFanCool_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.CellFanCool_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CellFanCool_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.CellFanCool_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.CellFanCool_TextBox.Location = New System.Drawing.Point(459, 310)
-        Me.CellFanCool_TextBox.Name = "CellFanCool_TextBox"
-        Me.CellFanCool_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.CellFanCool_TextBox.TabIndex = 29
-        Me.CellFanCool_TextBox.Text = "12.241"
-        Me.CellFanCool_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CellFanCool_Label
-        '
-        Me.CellFanCool_Label.AutoSize = True
-        Me.CellFanCool_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.CellFanCool_Label.ForeColor = System.Drawing.Color.Teal
-        Me.CellFanCool_Label.Location = New System.Drawing.Point(459, 284)
-        Me.CellFanCool_Label.Name = "CellFanCool_Label"
-        Me.CellFanCool_Label.Size = New System.Drawing.Size(126, 21)
-        Me.CellFanCool_Label.TabIndex = 28
-        Me.CellFanCool_Label.Tag = ""
-        Me.CellFanCool_Label.Text = "Cell Fan Cooling"
-        '
-        'AmbHumid_TextBox
-        '
-        Me.AmbHumid_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.AmbHumid_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.AmbHumid_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.AmbHumid_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.AmbHumid_TextBox.Location = New System.Drawing.Point(251, 310)
-        Me.AmbHumid_TextBox.Name = "AmbHumid_TextBox"
-        Me.AmbHumid_TextBox.Size = New System.Drawing.Size(145, 22)
-        Me.AmbHumid_TextBox.TabIndex = 27
-        Me.AmbHumid_TextBox.Text = "12.241"
-        Me.AmbHumid_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'AmbHumid_Label
-        '
-        Me.AmbHumid_Label.AutoSize = True
-        Me.AmbHumid_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.AmbHumid_Label.ForeColor = System.Drawing.Color.Teal
-        Me.AmbHumid_Label.Location = New System.Drawing.Point(251, 284)
-        Me.AmbHumid_Label.Name = "AmbHumid_Label"
-        Me.AmbHumid_Label.Size = New System.Drawing.Size(144, 21)
-        Me.AmbHumid_Label.TabIndex = 26
-        Me.AmbHumid_Label.Tag = ""
-        Me.AmbHumid_Label.Text = "Ambient Humidity"
-        '
-        'AmbTemp_TextBox
-        '
-        Me.AmbTemp_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.AmbTemp_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.AmbTemp_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.AmbTemp_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.AmbTemp_TextBox.Location = New System.Drawing.Point(27, 310)
-        Me.AmbTemp_TextBox.Name = "AmbTemp_TextBox"
-        Me.AmbTemp_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.AmbTemp_TextBox.TabIndex = 25
-        Me.AmbTemp_TextBox.Text = "12.241"
-        Me.AmbTemp_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'AmbTemp_Label
-        '
-        Me.AmbTemp_Label.AutoSize = True
-        Me.AmbTemp_Label.Font = New System.Drawing.Font("Yu Gothic UI", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AmbTemp_Label.ForeColor = System.Drawing.Color.Teal
-        Me.AmbTemp_Label.Location = New System.Drawing.Point(27, 284)
-        Me.AmbTemp_Label.Name = "AmbTemp_Label"
-        Me.AmbTemp_Label.Size = New System.Drawing.Size(141, 17)
-        Me.AmbTemp_Label.TabIndex = 24
-        Me.AmbTemp_Label.Tag = ""
-        Me.AmbTemp_Label.Text = "Ambient Temperature"
-        '
-        'Cycle_TextBox
-        '
-        Me.Cycle_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.Cycle_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Cycle_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Cycle_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Cycle_TextBox.Location = New System.Drawing.Point(459, 220)
-        Me.Cycle_TextBox.Name = "Cycle_TextBox"
-        Me.Cycle_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.Cycle_TextBox.TabIndex = 23
-        Me.Cycle_TextBox.Text = "12.715"
-        Me.Cycle_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Cycle_Label
-        '
-        Me.Cycle_Label.AutoSize = True
-        Me.Cycle_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Cycle_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Cycle_Label.Location = New System.Drawing.Point(459, 194)
-        Me.Cycle_Label.Name = "Cycle_Label"
-        Me.Cycle_Label.Size = New System.Drawing.Size(49, 21)
-        Me.Cycle_Label.TabIndex = 22
-        Me.Cycle_Label.Tag = ""
-        Me.Cycle_Label.Text = "Cycle"
-        '
-        'CellTemp_TextBox
-        '
-        Me.CellTemp_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.CellTemp_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.CellTemp_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.CellTemp_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.CellTemp_TextBox.Location = New System.Drawing.Point(250, 220)
-        Me.CellTemp_TextBox.Name = "CellTemp_TextBox"
-        Me.CellTemp_TextBox.Size = New System.Drawing.Size(145, 22)
-        Me.CellTemp_TextBox.TabIndex = 21
-        Me.CellTemp_TextBox.Text = "12.715"
-        Me.CellTemp_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'CellTemp_Label
-        '
-        Me.CellTemp_Label.AutoSize = True
-        Me.CellTemp_Label.Font = New System.Drawing.Font("Yu Gothic UI", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.CellTemp_Label.ForeColor = System.Drawing.Color.Teal
-        Me.CellTemp_Label.Location = New System.Drawing.Point(250, 194)
-        Me.CellTemp_Label.Name = "CellTemp_Label"
-        Me.CellTemp_Label.Size = New System.Drawing.Size(124, 20)
-        Me.CellTemp_Label.TabIndex = 20
-        Me.CellTemp_Label.Tag = ""
-        Me.CellTemp_Label.Text = "Cell Temperature"
-        '
-        'Energy_TextBox
-        '
-        Me.Energy_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.Energy_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Energy_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Energy_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Energy_TextBox.Location = New System.Drawing.Point(27, 219)
-        Me.Energy_TextBox.Name = "Energy_TextBox"
-        Me.Energy_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.Energy_TextBox.TabIndex = 19
-        Me.Energy_TextBox.Text = "12.241"
-        Me.Energy_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Energy_Label
-        '
-        Me.Energy_Label.AutoSize = True
-        Me.Energy_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Energy_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Energy_Label.Location = New System.Drawing.Point(27, 193)
-        Me.Energy_Label.Name = "Energy_Label"
-        Me.Energy_Label.Size = New System.Drawing.Size(60, 21)
-        Me.Energy_Label.TabIndex = 18
-        Me.Energy_Label.Tag = ""
-        Me.Energy_Label.Text = "Energy"
-        '
-        'Status_TextBox
-        '
-        Me.Status_TextBox.BackColor = System.Drawing.SystemColors.Window
-        Me.Status_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Status_TextBox.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Bold)
-        Me.Status_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Status_TextBox.Location = New System.Drawing.Point(455, 52)
-        Me.Status_TextBox.Name = "Status_TextBox"
-        Me.Status_TextBox.Size = New System.Drawing.Size(104, 19)
-        Me.Status_TextBox.TabIndex = 17
-        Me.Status_TextBox.Text = "CYCLE TEST"
-        Me.Status_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'ClockTime_TextBox
-        '
-        Me.ClockTime_TextBox.BackColor = System.Drawing.SystemColors.Window
-        Me.ClockTime_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.ClockTime_TextBox.Font = New System.Drawing.Font("Symbol", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ClockTime_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.ClockTime_TextBox.Location = New System.Drawing.Point(249, 52)
-        Me.ClockTime_TextBox.Name = "ClockTime_TextBox"
-        Me.ClockTime_TextBox.Size = New System.Drawing.Size(104, 20)
-        Me.ClockTime_TextBox.TabIndex = 16
-        Me.ClockTime_TextBox.Text = "00 : 00 : 00"
-        Me.ClockTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Power_TextBox
-        '
-        Me.Power_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.Power_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Power_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Power_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Power_TextBox.Location = New System.Drawing.Point(459, 135)
-        Me.Power_TextBox.Name = "Power_TextBox"
-        Me.Power_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.Power_TextBox.TabIndex = 15
-        Me.Power_TextBox.Text = "68.788"
-        Me.Power_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Current_TextBox
-        '
-        Me.Current_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.Current_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Current_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Current_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Current_TextBox.Location = New System.Drawing.Point(250, 135)
-        Me.Current_TextBox.Name = "Current_TextBox"
-        Me.Current_TextBox.Size = New System.Drawing.Size(145, 22)
-        Me.Current_TextBox.TabIndex = 14
-        Me.Current_TextBox.Text = "5.411"
-        Me.Current_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Power_Label
-        '
-        Me.Power_Label.AutoSize = True
-        Me.Power_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Power_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Power_Label.Location = New System.Drawing.Point(459, 109)
-        Me.Power_Label.Name = "Power_Label"
-        Me.Power_Label.Size = New System.Drawing.Size(56, 21)
-        Me.Power_Label.TabIndex = 13
-        Me.Power_Label.Tag = "v"
-        Me.Power_Label.Text = "Power"
-        '
-        'Current_Label
-        '
-        Me.Current_Label.AutoSize = True
-        Me.Current_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Current_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Current_Label.Location = New System.Drawing.Point(250, 109)
-        Me.Current_Label.Name = "Current_Label"
-        Me.Current_Label.Size = New System.Drawing.Size(65, 21)
-        Me.Current_Label.TabIndex = 11
-        Me.Current_Label.Tag = "v"
-        Me.Current_Label.Text = "Current"
-        '
-        'Voltage_TextBox
-        '
-        Me.Voltage_TextBox.BackColor = System.Drawing.Color.LightCyan
-        Me.Voltage_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.Voltage_TextBox.Font = New System.Drawing.Font("Nirmala UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Voltage_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.Voltage_TextBox.Location = New System.Drawing.Point(27, 135)
-        Me.Voltage_TextBox.Name = "Voltage_TextBox"
-        Me.Voltage_TextBox.Size = New System.Drawing.Size(146, 22)
-        Me.Voltage_TextBox.TabIndex = 10
-        Me.Voltage_TextBox.Text = "12.715"
-        Me.Voltage_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'Voltage_Label
-        '
-        Me.Voltage_Label.AutoSize = True
-        Me.Voltage_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Voltage_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Voltage_Label.Location = New System.Drawing.Point(27, 109)
-        Me.Voltage_Label.Name = "Voltage_Label"
-        Me.Voltage_Label.Size = New System.Drawing.Size(66, 21)
-        Me.Voltage_Label.TabIndex = 9
-        Me.Voltage_Label.Tag = ""
-        Me.Voltage_Label.Text = "Voltage"
-        '
-        'Status_Label
-        '
-        Me.Status_Label.AutoSize = True
-        Me.Status_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.Status_Label.ForeColor = System.Drawing.Color.Teal
-        Me.Status_Label.Location = New System.Drawing.Point(455, 26)
-        Me.Status_Label.Name = "Status_Label"
-        Me.Status_Label.Size = New System.Drawing.Size(55, 21)
-        Me.Status_Label.TabIndex = 8
-        Me.Status_Label.Tag = "v"
-        Me.Status_Label.Text = "Status"
-        '
-        'ClockTime_Label
-        '
-        Me.ClockTime_Label.AutoSize = True
-        Me.ClockTime_Label.Font = New System.Drawing.Font("Yu Gothic UI", 12.0!, System.Drawing.FontStyle.Bold)
-        Me.ClockTime_Label.ForeColor = System.Drawing.Color.Teal
-        Me.ClockTime_Label.Location = New System.Drawing.Point(249, 26)
-        Me.ClockTime_Label.Name = "ClockTime_Label"
-        Me.ClockTime_Label.Size = New System.Drawing.Size(90, 21)
-        Me.ClockTime_Label.TabIndex = 7
-        Me.ClockTime_Label.Tag = "v"
-        Me.ClockTime_Label.Text = "Clock Time"
-        '
-        'RunningTime_TextBox
-        '
-        Me.RunningTime_TextBox.BackColor = System.Drawing.SystemColors.Window
-        Me.RunningTime_TextBox.BorderStyle = System.Windows.Forms.BorderStyle.None
-        Me.RunningTime_TextBox.Font = New System.Drawing.Font("Symbol", 14.25!, System.Drawing.FontStyle.Bold)
-        Me.RunningTime_TextBox.ForeColor = System.Drawing.Color.DarkSlateGray
-        Me.RunningTime_TextBox.Location = New System.Drawing.Point(31, 50)
-        Me.RunningTime_TextBox.Name = "RunningTime_TextBox"
-        Me.RunningTime_TextBox.Size = New System.Drawing.Size(140, 24)
-        Me.RunningTime_TextBox.TabIndex = 4
-        Me.RunningTime_TextBox.Text = "00 : 00 : 00"
-        Me.RunningTime_TextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
-        '
-        'RightPanel
-        '
-        Me.RightPanel.BackColor = System.Drawing.Color.Teal
-        Me.RightPanel.Controls.Add(Me.Exit_button)
-        Me.RightPanel.Controls.Add(Me.Title2_Label)
-        Me.RightPanel.Controls.Add(Me.Title1_label)
-        Me.RightPanel.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.RightPanel.Location = New System.Drawing.Point(-3, 0)
-        Me.RightPanel.Name = "RightPanel"
-        Me.RightPanel.Size = New System.Drawing.Size(322, 464)
-        Me.RightPanel.TabIndex = 1
-        '
-        'Exit_button
-        '
-        Me.Exit_button.AutoSize = True
-        Me.Exit_button.Font = New System.Drawing.Font("Segoe UI", 12.0!)
-        Me.Exit_button.ForeColor = System.Drawing.Color.PaleTurquoise
-        Me.Exit_button.Location = New System.Drawing.Point(15, 432)
-        Me.Exit_button.Name = "Exit_button"
-        Me.Exit_button.Size = New System.Drawing.Size(34, 21)
-        Me.Exit_button.TabIndex = 2
-        Me.Exit_button.Text = "Exit"
-        '
-        'Title2_Label
-        '
-        Me.Title2_Label.AutoSize = True
-        Me.Title2_Label.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Title2_Label.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Title2_Label.Location = New System.Drawing.Point(26, 52)
-        Me.Title2_Label.Name = "Title2_Label"
-        Me.Title2_Label.Size = New System.Drawing.Size(114, 31)
-        Me.Title2_Label.TabIndex = 1
-        Me.Title2_Label.Text = "Monitor"
-        '
-        'Title1_label
-        '
-        Me.Title1_label.AutoSize = True
-        Me.Title1_label.Font = New System.Drawing.Font("Microsoft YaHei UI", 18.0!, System.Drawing.FontStyle.Bold)
-        Me.Title1_label.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.Title1_label.Location = New System.Drawing.Point(33, 26)
-        Me.Title1_label.Name = "Title1_label"
-        Me.Title1_label.Size = New System.Drawing.Size(88, 31)
-        Me.Title1_label.TabIndex = 0
-        Me.Title1_label.Text = " Panel"
+        'TableLayoutPanel1
+        '
+        Me.TableLayoutPanel1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TableLayoutPanel1.BackColor = System.Drawing.Color.Brown
+        Me.TableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.InsetDouble
+        Me.TableLayoutPanel1.ColumnCount = 3
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334!))
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel17, 2, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel16, 1, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel15, 0, 4)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel14, 2, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel13, 1, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel12, 0, 3)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel11, 2, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel10, 1, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel9, 0, 2)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel8, 2, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel7, 1, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel6, 0, 1)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel5, 2, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel4, 1, 0)
+        Me.TableLayoutPanel1.Controls.Add(Me.Panel3, 0, 0)
+        Me.TableLayoutPanel1.Location = New System.Drawing.Point(3, 120)
+        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
+        Me.TableLayoutPanel1.Padding = New System.Windows.Forms.Padding(12, 8, 16, 8)
+        Me.TableLayoutPanel1.RowCount = 5
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.TableLayoutPanel1.Size = New System.Drawing.Size(455, 328)
+        Me.TableLayoutPanel1.TabIndex = 0
+        '
+        'Panel3
+        '
+        Me.Panel3.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel3.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel3.Location = New System.Drawing.Point(21, 17)
+        Me.Panel3.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(126, 46)
+        Me.Panel3.TabIndex = 0
+        '
+        'Panel4
+        '
+        Me.Panel4.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel4.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel4.Location = New System.Drawing.Point(162, 17)
+        Me.Panel4.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(126, 46)
+        Me.Panel4.TabIndex = 1
+        '
+        'Panel5
+        '
+        Me.Panel5.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel5.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel5.Location = New System.Drawing.Point(303, 17)
+        Me.Panel5.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(127, 46)
+        Me.Panel5.TabIndex = 2
+        '
+        'Panel6
+        '
+        Me.Panel6.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel6.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel6.Location = New System.Drawing.Point(21, 78)
+        Me.Panel6.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(126, 46)
+        Me.Panel6.TabIndex = 3
+        '
+        'Panel7
+        '
+        Me.Panel7.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel7.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel7.Location = New System.Drawing.Point(162, 78)
+        Me.Panel7.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel7.Name = "Panel7"
+        Me.Panel7.Size = New System.Drawing.Size(126, 46)
+        Me.Panel7.TabIndex = 4
+        '
+        'Panel8
+        '
+        Me.Panel8.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel8.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel8.Location = New System.Drawing.Point(303, 78)
+        Me.Panel8.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel8.Name = "Panel8"
+        Me.Panel8.Size = New System.Drawing.Size(127, 46)
+        Me.Panel8.TabIndex = 5
+        '
+        'Panel9
+        '
+        Me.Panel9.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel9.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel9.Location = New System.Drawing.Point(21, 139)
+        Me.Panel9.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(126, 46)
+        Me.Panel9.TabIndex = 6
+        '
+        'Panel10
+        '
+        Me.Panel10.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel10.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel10.Location = New System.Drawing.Point(162, 139)
+        Me.Panel10.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel10.Name = "Panel10"
+        Me.Panel10.Size = New System.Drawing.Size(126, 46)
+        Me.Panel10.TabIndex = 7
+        '
+        'Panel11
+        '
+        Me.Panel11.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel11.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel11.Location = New System.Drawing.Point(303, 139)
+        Me.Panel11.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel11.Name = "Panel11"
+        Me.Panel11.Size = New System.Drawing.Size(127, 46)
+        Me.Panel11.TabIndex = 8
+        '
+        'Panel12
+        '
+        Me.Panel12.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel12.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel12.Location = New System.Drawing.Point(21, 200)
+        Me.Panel12.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel12.Name = "Panel12"
+        Me.Panel12.Size = New System.Drawing.Size(126, 46)
+        Me.Panel12.TabIndex = 9
+        '
+        'Panel13
+        '
+        Me.Panel13.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel13.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel13.Location = New System.Drawing.Point(162, 200)
+        Me.Panel13.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel13.Name = "Panel13"
+        Me.Panel13.Size = New System.Drawing.Size(126, 46)
+        Me.Panel13.TabIndex = 10
+        '
+        'Panel14
+        '
+        Me.Panel14.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel14.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel14.Location = New System.Drawing.Point(303, 200)
+        Me.Panel14.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel14.Name = "Panel14"
+        Me.Panel14.Size = New System.Drawing.Size(127, 46)
+        Me.Panel14.TabIndex = 11
+        '
+        'Panel15
+        '
+        Me.Panel15.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel15.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel15.Location = New System.Drawing.Point(21, 261)
+        Me.Panel15.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel15.Name = "Panel15"
+        Me.Panel15.Size = New System.Drawing.Size(126, 50)
+        Me.Panel15.TabIndex = 12
+        '
+        'Panel16
+        '
+        Me.Panel16.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel16.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel16.Location = New System.Drawing.Point(162, 261)
+        Me.Panel16.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel16.Name = "Panel16"
+        Me.Panel16.Size = New System.Drawing.Size(126, 50)
+        Me.Panel16.TabIndex = 13
+        '
+        'Panel17
+        '
+        Me.Panel17.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel17.BackColor = System.Drawing.Color.Chocolate
+        Me.Panel17.Location = New System.Drawing.Point(303, 261)
+        Me.Panel17.Margin = New System.Windows.Forms.Padding(6)
+        Me.Panel17.Name = "Panel17"
+        Me.Panel17.Size = New System.Drawing.Size(127, 50)
+        Me.Panel17.TabIndex = 14
+        '
+        'Panel2
+        '
+        Me.Panel2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel2.BackColor = System.Drawing.Color.Salmon
+        Me.Panel2.Controls.Add(Me.Chart1)
+        Me.Panel2.Controls.Add(Me.Panel1)
+        Me.Panel2.Controls.Add(Me.TableLayoutPanel1)
+        Me.Panel2.Location = New System.Drawing.Point(12, 12)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(877, 451)
+        Me.Panel2.TabIndex = 1
+        '
+        'Panel1
+        '
+        Me.Panel1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Panel1.BackColor = System.Drawing.Color.Red
+        Me.Panel1.Controls.Add(Me.PictureBox1)
+        Me.Panel1.Location = New System.Drawing.Point(3, 3)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(871, 111)
+        Me.Panel1.TabIndex = 1
+        '
+        'Chart1
+        '
+        Me.Chart1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        ChartArea4.Name = "ChartArea1"
+        Me.Chart1.ChartAreas.Add(ChartArea4)
+        Legend4.Name = "Legend1"
+        Me.Chart1.Legends.Add(Legend4)
+        Me.Chart1.Location = New System.Drawing.Point(464, 120)
+        Me.Chart1.Name = "Chart1"
+        Series4.ChartArea = "ChartArea1"
+        Series4.Legend = "Legend1"
+        Series4.Name = "Series1"
+        Me.Chart1.Series.Add(Series4)
+        Me.Chart1.Size = New System.Drawing.Size(410, 328)
+        Me.Chart1.TabIndex = 2
+        Me.Chart1.Text = "Chart1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Location = New System.Drawing.Point(3, 3)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(149, 105)
+        Me.PictureBox1.TabIndex = 0
+        Me.PictureBox1.TabStop = False
         '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1063, 561)
-        Me.Controls.Add(Me.RightPanel)
-        Me.Controls.Add(Me.MainPanel)
+        Me.ClientSize = New System.Drawing.Size(901, 475)
+        Me.Controls.Add(Me.Panel2)
         Me.ForeColor = System.Drawing.SystemColors.AppWorkspace
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
-        Me.MainPanel.ResumeLayout(False)
-        Me.MainPanel.PerformLayout()
-        Me.RightPanel.ResumeLayout(False)
-        Me.RightPanel.PerformLayout()
+        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel1.ResumeLayout(False)
+        CType(Me.Chart1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
-
-    Friend WithEvents RunningTime_Label As Label
-    Friend WithEvents MainPanel As Panel
-    Friend WithEvents RightPanel As Panel
-    Friend WithEvents Title1_label As Label
-    Friend WithEvents Title2_Label As Label
-    Friend WithEvents Status_Label As Label
-    Friend WithEvents ClockTime_Label As Label
-    Friend WithEvents RunningTime_TextBox As TextBox
-    Friend WithEvents Power_Label As Label
-    Friend WithEvents Current_Label As Label
-    Friend WithEvents Voltage_TextBox As TextBox
-    Friend WithEvents Voltage_Label As Label
-    Friend WithEvents Cycle_TextBox As TextBox
-    Friend WithEvents Cycle_Label As Label
-    Friend WithEvents CellTemp_TextBox As TextBox
-    Friend WithEvents CellTemp_Label As Label
-    Friend WithEvents Energy_TextBox As TextBox
-    Friend WithEvents Energy_Label As Label
-    Friend WithEvents Status_TextBox As TextBox
-    Friend WithEvents ClockTime_TextBox As TextBox
-    Friend WithEvents Power_TextBox As TextBox
-    Friend WithEvents Current_TextBox As TextBox
-    Friend WithEvents PWMOut_TextBox As TextBox
-    Friend WithEvents PWMOut_Label As Label
-    Friend WithEvents DPowerTarget_TextBox As TextBox
-    Friend WithEvents DPowerTarget_Label As Label
-    Friend WithEvents DCurrentTarget_TextBox As TextBox
-    Friend WithEvents DCurrentTarget_Label As Label
-    Friend WithEvents CellFanCool_TextBox As TextBox
-    Friend WithEvents CellFanCool_Label As Label
-    Friend WithEvents AmbHumid_TextBox As TextBox
-    Friend WithEvents AmbHumid_Label As Label
-    Friend WithEvents AmbTemp_TextBox As TextBox
-    Friend WithEvents AmbTemp_Label As Label
-    Friend WithEvents Exit_button As Label
     Friend WithEvents SerialPort1 As IO.Ports.SerialPort
+    Friend WithEvents Timer1 As Timer
+    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents Panel17 As Panel
+    Friend WithEvents Panel16 As Panel
+    Friend WithEvents Panel15 As Panel
+    Friend WithEvents Panel14 As Panel
+    Friend WithEvents Panel13 As Panel
+    Friend WithEvents Panel12 As Panel
+    Friend WithEvents Panel11 As Panel
+    Friend WithEvents Panel10 As Panel
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents Panel8 As Panel
+    Friend WithEvents Panel7 As Panel
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents Panel1 As Panel
+    Friend WithEvents Chart1 As DataVisualization.Charting.Chart
+    Friend WithEvents PictureBox1 As PictureBox
 End Class
